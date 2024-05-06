@@ -1,0 +1,14 @@
+
+>>>hdfs namenode -format 
+>>>////go to C: drive and then in Hadoop folder
+>>>cd sbin
+>>>start-dfs.cmd
+>>>start-yarn.cmd
+>>>jps
+>>>start-dfs.cmd////
+>>>hadoop fs -mkdir /input_dir
+>>>hadoop fs -put C:/data.txt /input_dir
+>>>hadoop fs -ls /input_dir/
+>>>hadoop dfs -cat /input_dir/data.txt
+>>>hadoop jar C:/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.6.jar wordcount /input_dir /output_dir
+>>>hadoop fs -cat /output_dir/*
